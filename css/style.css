@@ -56,4 +56,23 @@ p.emphasis {
   width: 20px;
   margin: 0 7px;
 }
+
+button {
+  /*background-color: black;*/
+  height: 75px;
+  width: 150px;
+  border-radius: 10%;
+  color: #ffffff;
+  font-family: "Corbel";
+  padding: 30px;
+  font-size: 1em;
+}
+
+.prev {
+  background-color: #002d66;
+}
+
+.next {
+  background-color: #c6401b;
+}
 }
