@@ -98,14 +98,27 @@ $(".prev").click(function(){
   if(state.slideNumber ===1) {
     map.removeLayer(state.mapped);
     state.mapped = L.geoJson(HRTFilter).addTo(map);
+    $("#modeID").text(state.slideData[state.slideNumber-1].mode);
+    $("#des").text(state.slideData[state.slideNumber-1].description);
+    $("#lines").text(state.slideData[state.slideNumber-1].lines);
   }else if(state.slideNumber ===2) {
       map.removeLayer(state.mapped);
       state.mapped = L.geoJson(LRTFilter).addTo(map);
+      $("#modeID").text(state.slideData[state.slideNumber-1].mode);
+      $("#des").text(state.slideData[state.slideNumber-1].description);
+      $("#lines").text(state.slideData[state.slideNumber-1].lines);
   }else if (state.slideNumber ===3){
     map.removeLayer(state.mapped);
     state.mapped = L.geoJson(BusFilter).addTo(map);
+    $("#modeID").text(state.slideData[state.slideNumber-1].mode);
+    $("#des").text(state.slideData[state.slideNumber-1].description);
+    $("#lines").text(state.slideData[state.slideNumber-1].lines);
   }else if (state.slideNumber===0){
     map.removeLayer(state.mapped);
+    $("#modeID").hide();
+    $("#des").hide();
+    $("#lines").hide();
+  
   }
   console.log(state.slideNumber);
 });
